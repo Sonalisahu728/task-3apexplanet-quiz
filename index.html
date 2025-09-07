@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Interactive Quiz Challenge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="screen active" id="welcome-screen">
+      <header>
+        <h1>Interactive Quiz Challenge</h1>
+        <p class="description">Test your knowledge with this interactive quiz and get a fun joke at the end!</p>
+      </header>
+      <div class="screen-content">
+        <h2>Quiz Instructions</h2>
+        <p>This quiz contains 5 questions about web development. You'll have 15 seconds per question.</p>
+        <ul>
+          <li>Select the correct answer from the options</li>
+          <li>Click 'Next Question' to proceed</li>
+          <li>Your score will be shown at the end</li>
+          <li>You'll get a programming joke after completion</li>
+        </ul>
+        <div class="center-buttons">
+          <button class="btn" id="start-btn">Start Quiz</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="screen" id="quiz-screen">
+      <div class="quiz-info">
+        <div class="question-number" id="question-number">Question 1 of 5</div>
+        <div class="timer" id="timer">15s</div>
+      </div>
+      <div class="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+      <h2 id="question">Question goes here</h2>
+      <div class="options" id="options-container"></div>
+      <div class="navigation-buttons">
+        <button class="btn" id="next-btn">Next Question</button>
+      </div>
+    </div>
+
+    <div class="screen" id="results-screen">
+      <div class="result">
+        <h2>Quiz Completed!</h2>
+        <p class="score-text">Your final score is:</p>
+        <div class="score" id="final-score">0/0</div>
+        <div class="center-buttons">
+          <button class="btn" id="restart-btn">Take Quiz Again</button>
+        </div>
+      </div>
+      <div class="joke-container">
+        <h3 class="joke-title">Here's a joke for you:</h3>
+        <p id="joke-text">Loading joke...</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
